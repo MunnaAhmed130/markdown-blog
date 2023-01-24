@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-// route
+// route /article/new
 router.get("/new", (req, res) => {
-    res.send("new articles");
+    // directory location in views
+    res.render("articles/new");
 });
+
+router.post("/", (req, res) => {});
 
 module.exports = router;
